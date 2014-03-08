@@ -10,9 +10,9 @@ import java.util.Arrays;
  *
  * Added value:
  * <li>more abstraction</li>
- * <li>default inplementations of equals + hashcode</li>
+ * <li>default implementations of equals + hashcode</li>
  * <li>can be used in collections</li>
- * <li>casching</li>
+ * <li>caching</li>
  *
  * @author ytoh
  */
@@ -124,10 +124,20 @@ public class Point {
         return this.array == other.array || (this.array != null && Arrays.equals(this.array, other.array));
     }
 
+    /**
+     * Deep hash by content not by an array reference
+     * Point [1,1] and [1,1] should have same hash
+     *
+     * @return hash code
+     */
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 89 * hash + (this.array != null ? this.array.hashCode() : 0);
-        return hash;
+        if (this.array != null) {
+            for (int i = 0; i < array.length; i++) {
+                hash += array[i] * 13;
+            }
+        }
+        return 89 * hash;
     }
 }
