@@ -16,9 +16,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git://github.com/cvut/JCOOL.git</connection>
-        <developerConnection>scm:git:git@github.com:cvut/JCOOL.git</developerConnection>
-        <url>https://github.com/cvut/JCOOL</url>
+        <connection>scm:git:git://github.com/cvut/jcool-core.git</connection>
+        <developerConnection>scm:git:git@github.com:cvut/jcool-core.git</developerConnection>
+        <url>https://github.com/cvut/jcool-core</url>
     </scm>
     <build>
         <plugins>
