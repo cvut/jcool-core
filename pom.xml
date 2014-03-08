@@ -16,7 +16,7 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git://github.com/cvut/jcool-core.git</connection>
+        <connection>scm:git:git@github.com:cvut/jcool-core.git</connection>
         <developerConnection>scm:git:git@github.com:cvut/jcool-core.git</developerConnection>
         <url>https://github.com/cvut/jcool-core</url>
     </scm>
