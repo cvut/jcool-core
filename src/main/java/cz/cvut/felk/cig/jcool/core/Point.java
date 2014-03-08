@@ -87,6 +87,13 @@ public class Point {
         return new Point(array);
     }
 
+    public int dimension() {
+        if (array != null) {
+            return array.length;
+        }
+        return 0;
+    }
+
     /**
      *
      * @return

@@ -123,4 +123,13 @@ public class PointTest {
         assertEquals(false, a.hashCode() == b.hashCode());
     }
 
+    /**
+     * Test of dimension method, of class Point.
+     */
+    @Test
+    public void testDimension() {
+        assertEquals(2, subject.dimension());
+        assertEquals(3, Point.at(new double[]{1, 2, 3}).dimension());
+    }
+
 }
