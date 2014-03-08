@@ -132,4 +132,12 @@ public class PointTest {
         assertEquals(3, Point.at(new double[]{1, 2, 3}).dimension());
     }
 
+    /**
+     * Test of value method, of class Point.
+     */
+    @Test
+    public void testValue() {
+        assertEquals(1.0, subject.value(0), delta);
+    }
+
 }

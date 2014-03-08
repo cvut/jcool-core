@@ -87,11 +87,28 @@ public class Point {
         return new Point(array);
     }
 
+    /**
+     * Return dimension of point
+     *
+     * @return point's dimension
+     */
     public int dimension() {
         if (array != null) {
             return array.length;
         }
         return 0;
+    }
+
+    /**
+     *
+     * @param dimension
+     * @return coordinate value at given dimension
+     */
+    public double value(int dimension) {
+        if (dimension < 0 || dimension > array.length) {
+            throw new RuntimeException("invalid dimension = " + dimension);
+        }
+        return array[dimension];
     }
 
     /**
