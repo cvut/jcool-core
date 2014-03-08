@@ -20,6 +20,14 @@
         <developerConnection>scm:git:git@github.com:cvut/jcool-core.git</developerConnection>
         <url>https://github.com/cvut/jcool-core</url>
     </scm>
+    <inceptionYear>2012</inceptionYear>
+    <developers>
+        <developer>
+            <id>deric</id>
+            <name>Tomas Barton</name>
+            <email>barton.tomas@gmail.com</email>
+        </developer>
+    </developers>
     <build>
         <plugins>
             <plugin>
