@@ -4,7 +4,7 @@
     <groupId>cz.cvut.felk.cig.jcool</groupId>
     <artifactId>jcool-core</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>jcool-core</name>
     <url>https://github.com/cvut/JCOOL/tree/master/jcool/core</url>
     <description>Java COntinuous Optimization Library</description>
