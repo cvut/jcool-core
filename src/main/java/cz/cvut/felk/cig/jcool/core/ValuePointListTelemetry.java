@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 import java.util.ArrayList;
@@ -11,12 +6,13 @@ import java.util.List;
 /**
  * A thread-safe implementation of the <code>Telemetry</code> interface capable
  * of externalizing a list of <code>ValuePoint</code>s.
+ *
  * @see ValuePoint
  *
  * @author ytoh
  */
 public final class ValuePointListTelemetry implements Telemetry<List<ValuePoint>> {
-    
+
     //  telemetry representation
     private final List<ValuePoint> valuePoints;
 
@@ -43,7 +39,7 @@ public final class ValuePointListTelemetry implements Telemetry<List<ValuePoint>
      * to worry about changes.
      *
      * @return list of ValuePoints
-     * a fresh copy of the represented current state
+     *         a fresh copy of the represented current state
      */
     public List<ValuePoint> getValue() {
         return new ArrayList<ValuePoint>(valuePoints);
@@ -54,7 +50,7 @@ public final class ValuePointListTelemetry implements Telemetry<List<ValuePoint>
         ValuePoint minimum = ValuePoint.at(Point.at(0), Double.POSITIVE_INFINITY);
 
         for (ValuePoint valuePoint : valuePoints) {
-            if(valuePoint.getValue() < minimum.getValue()) {
+            if (valuePoint.getValue() < minimum.getValue()) {
                 minimum = valuePoint;
             }
         }

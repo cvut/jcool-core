@@ -20,7 +20,7 @@
         <developerConnection>scm:git:git@github.com:cvut/jcool-core.git</developerConnection>
         <url>https://github.com/cvut/jcool-core</url>
     </scm>
-    <inceptionYear>2012</inceptionYear>
+    <inceptionYear>2008</inceptionYear>
     <developers>
         <developer>
             <id>deric</id>

@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
@@ -16,13 +11,16 @@ package cz.cvut.felk.cig.jcool.core;
 public class OptimizationException extends RuntimeException {
 
     /**
-     * Creates a new instance of <code>OptimizationException</code> without detail message.
+     * Creates a new instance of <code>OptimizationException</code> without
+     * detail message.
      */
-    public OptimizationException() {}
-
+    public OptimizationException() {
+    }
 
     /**
-     * Constructs an instance of <code>OptimizationException</code> with the specified detail message.
+     * Constructs an instance of <code>OptimizationException</code> with the
+     * specified detail message.
+     *
      * @param msg the detail message.
      */
     public OptimizationException(String msg) {
@@ -30,7 +28,8 @@ public class OptimizationException extends RuntimeException {
     }
 
     /**
-     * Creates a new instance of <code>OptimizationException</code> with the specified cause.
+     * Creates a new instance of <code>OptimizationException</code> with the
+     * specified cause.
      *
      * @param cause the cause of this exception
      */
@@ -39,10 +38,11 @@ public class OptimizationException extends RuntimeException {
     }
 
     /**
-     * Creates a new instance of <code>OptimizationException</code> with a cause and a message.
+     * Creates a new instance of <code>OptimizationException</code> with a cause
+     * and a message.
      *
      * @param message the detail message
-     * @param cause the cause of this exception
+     * @param cause   the cause of this exception
      */
     public OptimizationException(String message, Throwable cause) {
         super(message, cause);

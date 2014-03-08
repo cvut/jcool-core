@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
@@ -15,7 +10,7 @@ public interface FunctionBounds {
 
     /**
      * Lower bounds of function's domain in every dimension.
-     * 
+     *
      * @return array of values representing lower bounds
      */
     double[] getMinimum();

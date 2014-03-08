@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
@@ -18,7 +13,7 @@ public interface Telemetry<E> {
 
     /**
      * Retrieve the current externalized value
-     * 
+     *
      * @return externalized value
      */
     E getValue();

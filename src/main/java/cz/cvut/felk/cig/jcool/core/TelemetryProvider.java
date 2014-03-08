@@ -1,13 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
  * A telemetry provider is an object able to externalize its inner values
- * using a telemery.
+ * using a telemetry.
  * (Mediator pattern)
  *
  * All the communication to other telemetry aware objects is done by updating
@@ -16,7 +11,7 @@ package cz.cvut.felk.cig.jcool.core;
  * @author ytoh
  */
 public interface TelemetryProvider {
-    
+
     /**
      * Return the telemetry to be used to externalize the state of optimization
      * execution.

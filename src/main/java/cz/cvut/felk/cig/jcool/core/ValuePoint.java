@@ -1,21 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
  * An immutable point wrapper to represent the value of a function
- * at a specified point. The immutability makes this class threadsafe.
+ * at a specified point. The immutability makes this class thread-safe.
  *
  * @author ytoh
  */
 public class ValuePoint implements Comparable<ValuePoint> {
-    private final Point   point;
-    private final double  value;
 
-    /** */
+    private final Point point;
+    private final double value;
+
     private static final ValuePoint DEFAULT = new ValuePoint(Point.getDefault(), Double.NaN);
 
     /**
@@ -47,7 +42,7 @@ public class ValuePoint implements Comparable<ValuePoint> {
     }
 
     /**
-     * 
+     *
      * @param p
      * @param function
      * @return
@@ -65,7 +60,7 @@ public class ValuePoint implements Comparable<ValuePoint> {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public Point getPoint() {
@@ -89,10 +84,7 @@ public class ValuePoint implements Comparable<ValuePoint> {
         if (this.point != other.point && (this.point == null || !this.point.equals(other.point))) {
             return false;
         }
-        if (this.value != other.value) {
-            return false;
-        }
-        return true;
+        return this.value == other.value;
     }
 
     @Override
@@ -106,11 +98,13 @@ public class ValuePoint implements Comparable<ValuePoint> {
     public int compareTo(ValuePoint o) {
         //return (int) (o.getValue() - this.getValue());
 
-        if (this.getValue() > o.getValue())
+        if (this.getValue() > o.getValue()) {
             return 1;
+        }
 
-        if (this.getValue() < o.getValue())
+        if (this.getValue() < o.getValue()) {
             return -1;
+        }
 
         return 0;
     }

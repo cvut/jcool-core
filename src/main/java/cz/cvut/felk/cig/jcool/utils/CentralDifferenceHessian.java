@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.utils;
 
 import cz.cvut.felk.cig.jcool.core.Hessian;
@@ -17,13 +12,13 @@ import cz.cvut.felk.cig.jcool.core.Point;
 public class CentralDifferenceHessian implements NumericalHessian {
 
     public Hessian hessianAt(ObjectiveFunction function, Point point) {
-        int dimension       = function.getDimension();
-        double[][] hessian  = new double[dimension][dimension];
-        double[] h          = new double[dimension];
-        double[] fplus      = new double[dimension];
-        double[] fminus     = new double[dimension];
-        double tolerance    = Math.pow(MachineAccuracy.EPSILON, 0.25);//TODO revise maybe 1/3
-        double[] p          = point.toArray();
+        int dimension = function.getDimension();
+        double[][] hessian = new double[dimension][dimension];
+        double[] h = new double[dimension];
+        double[] fplus = new double[dimension];
+        double[] fminus = new double[dimension];
+        double tolerance = Math.pow(MachineAccuracy.EPSILON, 0.25);//TODO revise maybe 1/3
+        double[] p = point.toArray();
         double valueAtPoint = function.valueAt(point);
 
         double xh, oldx, oldy, fxx, tH;
@@ -31,7 +26,7 @@ public class CentralDifferenceHessian implements NumericalHessian {
             h[i] = tolerance * (Math.abs(p[i]) + MachineAccuracy.EPSILON);
             xh = p[i] + h[i];
             h[i] = xh - p[i];
-          
+
             oldx = p[i];
 
             p[i] = oldx + h[i];

@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
@@ -24,13 +19,17 @@ public interface ObjectiveFunction extends Function, FunctionGradient, FunctionH
 
     /**
      * Indicates whether function value changes through time.
-     * @return true if the underlying function changes with time (e.g. generations in evolutionary process)
+     *
+     * @return true if the underlying function changes with time (e.g.
+     *         generations in evolutionary process)
      */
     boolean isDynamic();
 
     /**
      * Checks if given position is in function bounds.
-     * Point as argument gives extreme inefficiency, but makes evaluation more trustworthy. 
+     * Point as argument gives extreme inefficiency, but makes evaluation more
+     * trustworthy.
+     *
      * @param position - location in n-dimensional space.
      * @return true if given position is within function bounds.
      */

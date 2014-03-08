@@ -1,19 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package cz.cvut.felk.cig.jcool.core;
 
 import java.util.Arrays;
 
 /**
  * Wrapper class around a gradient array.
- * 
+ *
  * Added value:
  * <li>more abstraction</li>
- * <li>default inplementations of equals + hashcode</li>
+ * <li>default implementations of equals + hashcode</li>
  * <li>can be used in collections</li>
- * <li>casching</li>
+ * <li>caching</li>
  *
  * @author ytoh
  */
@@ -75,10 +71,7 @@ public class Gradient {
             return false;
         }
         final Gradient other = (Gradient) obj;
-        if (this.array != other.array && (this.array == null || !Arrays.equals(this.array, other.array))) {
-            return false;
-        }
-        return true;
+        return this.array == other.array || (this.array != null && Arrays.equals(this.array, other.array));
     }
 
     @Override

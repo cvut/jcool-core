@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.utils;
 
 import cz.cvut.felk.cig.jcool.core.Gradient;
@@ -13,21 +8,22 @@ import cz.cvut.felk.cig.jcool.core.Point;
 /**
  * Determine gradient numerically using central difference.
  * Needs 2*n function evaluations.
- * 
+ *
  * @author drchaj1
  */
 public class CentralDifferenceGradient implements NumericalGradient {
+
     // TODO: comment
     public static double gradientCDStepMult = Math.pow(MachineAccuracy.EPSILON, 1.0 / 3.0);
 
     public Gradient gradientAt(ObjectiveFunction function, Point point) {
-        double[] gradient   = new double[function.getDimension()];
-        double[] original   = point.toArray();
-        double[] p          = point.toArray();
+        double[] gradient = new double[function.getDimension()];
+        double[] original = point.toArray();
+        double[] p = point.toArray();
 
-        double h        = 0;
-        double fxplus   = 0;
-        double fxminus  = 0;
+        double h = 0;
+        double fxplus = 0;
+        double fxminus = 0;
         for (int i = 0; i < gradient.length; i++) {
             h = gradientCDStepMult * Math.abs(original[i]);
             if (h < gradientCDStepMult) {// TODO revise

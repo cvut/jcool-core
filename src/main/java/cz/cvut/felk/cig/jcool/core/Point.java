@@ -1,12 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * Wrapper class around a point (or input vector) array.
@@ -19,7 +13,7 @@ import java.util.Random;
  * <li>default inplementations of equals + hashcode</li>
  * <li>can be used in collections</li>
  * <li>casching</li>
- * 
+ *
  * @author ytoh
  */
 public class Point {
@@ -27,10 +21,14 @@ public class Point {
     // internal coordinate representation
     private final double[] array;
 
-    /** */
+    /**
+     *
+     */
     private String toString;
 
-    /** */
+    /**
+     *
+     */
     private static final Point DEFAULT = new Point(0);
 
     /**
@@ -47,7 +45,7 @@ public class Point {
         builder.append("[");
         for (int i = 0; i < array.length; i++) {
             builder.append(array[i]);
-            if(i < array.length - 1) {
+            if (i < array.length - 1) {
                 builder.append(",");
             }
         }
@@ -83,9 +81,9 @@ public class Point {
     public static final Point random(int dimension, double min, double max) {
         double[] array = new double[dimension];
 
-        for (int i = 0; i < array.length; i++)
-          array[i] = Math.random() * (max - min) + min;
-
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Math.random() * (max - min) + min;
+        }
         return new Point(array);
     }
 
@@ -123,10 +121,7 @@ public class Point {
             return false;
         }
         final Point other = (Point) obj;
-        if (this.array != other.array && (this.array == null || !Arrays.equals(this.array,other.array))) {
-            return false;
-        }
-        return true;
+        return this.array == other.array || (this.array != null && Arrays.equals(this.array, other.array));
     }
 
     @Override

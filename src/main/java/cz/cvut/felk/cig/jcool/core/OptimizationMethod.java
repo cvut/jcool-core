@@ -1,17 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
  * A method for finding a function optimum based on certain stop conditions.
  *
  * @author ytoh
+ * @param <T>
  */
 public interface OptimizationMethod<T extends Telemetry> extends Producer<T> {
-    
+
     /**
      * Initialization of the optimization method. Called before the main
      * optimization method.
@@ -33,7 +29,7 @@ public interface OptimizationMethod<T extends Telemetry> extends Producer<T> {
      * There fore this method should contain an optimization step.
      *
      * @throws OptimizationException if the optimization process encountered
-     * a problem
+     *                               a problem
      */
     void optimize();
 }

@@ -1,15 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 import java.util.Arrays;
 
 /**
  * Wrapper class around a hessian array.
- * 
+ *
  * Added value:
  * <li>more abstraction</li>
  * <li>default inplementations of equals + hashcode</li>
@@ -80,10 +75,7 @@ public class Hessian {
             return false;
         }
         final Hessian other = (Hessian) obj;
-        if (this.array != other.array && (this.array == null || !Arrays.equals(this.array,other.array))) {
-            return false;
-        }
-        return true;
+        return this.array == other.array || (this.array != null && Arrays.equals(this.array, other.array));
     }
 
     @Override

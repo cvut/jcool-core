@@ -1,19 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.cvut.felk.cig.jcool.core;
 
 /**
  * A thread-safe implementation of the <code>Telemetry</code> interface capable
  * of externalizing a single <code>ValuePoint</code>.
+ *
  * @see ValuePoint
  *
  * @author ytoh
  */
 public final class ValuePointTelemetry implements Telemetry<ValuePoint> {
-    
+
     // a reference to the current published telemetry
     private final ValuePoint valuePoint;
 
@@ -28,7 +24,7 @@ public final class ValuePointTelemetry implements Telemetry<ValuePoint> {
      * Publish a <code>ValuePoint</code> as the internal state/telemetry.
      *
      * @param value
-     * an instance of an immutable ValuePoint
+     *              an instance of an immutable ValuePoint
      */
     public ValuePointTelemetry(ValuePoint value) {
         this.valuePoint = value;
@@ -36,8 +32,9 @@ public final class ValuePointTelemetry implements Telemetry<ValuePoint> {
 
     /**
      * @return value
-     * an immutable instance of <code>ValuePoint</code> = point coordinates + value at these
-     * coordinates
+     *         an immutable instance of <code>ValuePoint</code> = point coordinates +
+     *         value at these
+     *         coordinates
      */
     public ValuePoint getValue() {
         return valuePoint;
